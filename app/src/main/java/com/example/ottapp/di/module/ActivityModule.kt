@@ -30,6 +30,8 @@ class ActivityModule(private val activity: AppCompatActivity) {
     }
 
     @Provides
-    fun provideAnimeListAdapter() = AnimeListAdapter(ArrayList())
+    fun provideAnimeListAdapter() = AnimeListAdapter(
+        ArrayList()
+    )
 
 }

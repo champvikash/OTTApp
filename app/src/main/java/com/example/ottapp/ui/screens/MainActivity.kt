@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setupUI()
         setupObserver()
     }
@@ -52,6 +51,10 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
+        adapter.itemClickListener = {
+            Toast.makeText(this, it.title, Toast.LENGTH_LONG).show()
+        }
     }
 
     private fun setupObserver() {

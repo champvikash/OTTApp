@@ -13,7 +13,6 @@ class AnimeListViewModel(private val animeListRepository: AnimeListRepository) :
 
     private val _uiState = MutableStateFlow<UiState<List<Data>>>(UiState.Loading)
 
-
     val uiState: StateFlow<UiState<List<Data>>> = _uiState
 
 
